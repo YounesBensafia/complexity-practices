@@ -66,15 +66,14 @@ double testAlgo(bool (*callback)(long int), long int N)
 
 int main() {
     FILE *fpt;
-    long int N[5] = {900004201, 99999, 903251, 22091, 1002583};
-
+    
     fpt = fopen("MyFile.csv", "w+");
     fprintf(fpt, "'valeur', 'N', 'N/2', 'racine de N'\n");
     fclose(fpt);
 
     fpt = fopen("MyFile.csv", "a+");
 
-    for (long int i = 22091; i < 90202000; i=i+200)
+    for (long int i = 22091; i < 90202; i=i+200)
     {
         double temps1 = testAlgo(premierN, i); 
         double temps2 = testAlgo(premierNsur2, i); 
